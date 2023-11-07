@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bé mèo bòng bong tặng em :3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/bongoCat.ico" />
+    <meta name="viewport" content="user-scalable=0">
+    <meta name="author" content="Josh O'Sullivan">
+    <script src="js/cat/catParts/bongos.js"></script>
+    <script src="js/cat/catParts/catEars.js"></script>
+    <script src="js/cat/catParts/catFace.js"></script>
+    <script src="js/cat/catParts/catLeg.js"></script>
+    <script src="js/cat/catParts/catTail.js"></script>
+    <script src="js/cat/catParts/catWhisker.js"></script>
+    <script src="js/cat/cat.js"></script>
+    <script src="js/fish.js"></script>
+    <script src="js/environment.js"></script>
+    <script>
+        function onload() {
+            document.getElementById("canvas").width = Math.round(window.innerWidth)
+            document.getElementById("canvas").height = Math.round(window.innerHeight*0.9)
+            env = new Environment()
+            setInterval(function(env){env.tick()},30,env)
+        }
+    </script>
+</head>
+
+<body onload="onload()">
+    <canvas id="canvas"></canvas>
+    <input type="button" id="reset" value="RESET" onclick="env.reset()"><!--
+    --><input type="button" id="bongoToggle" value="SUMMON BONGOS" onclick="env.cat.toggleBongos()"><!--
+    --><input type="button" id="bongoAgudoButton" value="SMOL BONGO" onclick="env.cat.hitBongos('agudo')" disabled="true"><!--
+    --><input type="button" id="bongoGraveButton" value="CHONKY BONGO" onclick="env.cat.hitBongos('grave')" disabled="true">
+    <h1>DƯới đây là quà tặng meo</h1>
+    <h2>Hướng dẫn vui đùa cùng Bong Bong:</h2>
+    <ul>
+        <li>Ấn vào Bong Bong cho nó nhảy</li>
+        <li>Ấn vào chân Bong Bong để cho bé nghỉ. Ấn vào mặt để đánh thức</li>
+        <li>Ấn bừa trên màn hình để cho ăn cá.</li>
+        <li>Ấn "Summon Bongos" để triệu hồi bongos nhạc cụ của mèo.</li>
+        <li>Ấn chuột trái để gõ bongos bé, hoặc dấu <- để gõ</li>
+        <li>Ấn chuột phải để gõ bongos lớn, hoặc dấu -> để gõ</li>
+        <li>Ấn reset cho mèo nghỉ chơi bongos</li>
+    </ul>
+    <p>Khi mà mèo ngủ thì nó sẽ mơ về cá, giống như anh sẽ mơ về em.</p>
+</body>
+</html>
